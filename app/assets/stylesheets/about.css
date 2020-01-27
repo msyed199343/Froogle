@@ -1,0 +1,43 @@
+.head_img{
+    height: 40px;
+    width: 125px;
+    padding-left: 30px;
+}
+.black{
+    background-color: lightslategrey;
+    width: 100%;
+    height: 1px;
+    opacity: 0.2;
+}
+
+.center{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 7vw;
+    font-weight: lighter;
+    text-align: center;
+    width: 450px;
+    margin: 0 auto;
+   
+}
+
+
+  
+.tough{
+    color: royalblue;
+}
+.tough_2{
+    color: tomato;
+}
+
+.img_2{
+   height: 90%;
+   width: 90%;
+  
+    
+    
+}
+
+.move{
+    padding-top: 100px;
+    text-align: center;
+}
