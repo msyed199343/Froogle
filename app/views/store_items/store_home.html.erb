@@ -1,1 +1,38 @@
-<h1>All Store items</h1>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<header> 
+            <div class="nav">
+                <a href="/users">Home</a>
+                <a href="/store_items">Store</a>
+                <a href="">Login</a> 
+                <a href="/users/new">Sign Up</a> 
+            </div>
+       
+             <%= link_to image_tag("Froogle.png", class: "head_img"), "/users"%>
+
+</header>
+           
+           
+        
+                    <%@items.each_with_index do |item, i|%>
+
+                <section class = 'item_container'> 
+                        <%if i.even?%>
+                            <%=image_tag("money.jpg", class: "product_images_1")%>
+                            <h2 class = 'items_1'> <%=item.name%> </h2>
+                            <h5 class = 'price_1'> <%=item.price%> </h5>
+                        <%else%>
+                            <%=image_tag("money.jpg", class: "product_images_2")%>
+                            <h2 class = 'items_2'> <%=item.name%> </h2>
+                            <h5 class = 'price_2'> <%=item.price%> </h5>
+                        <%end%>
+                    <%end%>
+
+                
+                 </section>
+
+        
+          
+
+                <footer>
+                </footer>

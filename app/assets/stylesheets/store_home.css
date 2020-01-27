@@ -1,0 +1,44 @@
+.items_1{
+    display: inline-block;
+    float: left;
+
+}
+
+.items_2{
+    display: inline-block;
+    float: right;
+    
+
+}
+
+.product_images_1{
+   height: 150px;
+   float:left;
+   border-radius: 100px;
+}
+
+.product_images_2{
+   height: 150px;
+   float:right;
+   border-radius: 100px;
+}
+
+.item_container{
+   /* text-align: center; */
+   background-color: green;
+    padding: 50px;
+    float: left;
+}
+
+.price_1 {
+    display: inline-block;
+    float: left;
+    padding: 25px;
+
+}
+
+.price_2 {
+    display: inline-block;
+    float: right;
+    padding: 25px;
+}
