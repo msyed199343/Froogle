@@ -12,21 +12,37 @@
 
 </header>
            
-           
-        
-                    <%@items.each_with_index do |item, i|%>
+           <section id = 'top' class = "top">
+            
+           </section>
 
-                <section class = 'item_container'> 
-                        <%if i.even?%>
-                            <%=image_tag("money.jpg", class: "product_images_1")%>
-                            <h2 class = 'items_1'> <%=item.name%> </h2>
-                            <h5 class = 'price_1'> <%=item.price%> </h5>
-                        <%else%>
-                            <%=image_tag("money.jpg", class: "product_images_2")%>
-                            <h2 class = 'items_2'> <%=item.name%> </h2>
-                            <h5 class = 'price_2'> <%=item.price%> </h5>
+                </section class = 'item_box'>
+                    
+                    <%@items.each_with_index do |item, i|%>
+                    <%if i.even?%>
+                            <p class = 'name_1'>
+                                 <%= item.name%>
+                            </p>
+                            <p class = 'item_pic_box_1'>
+                                <%= image_tag 'money.jpg',class:'item_pic_1' %>
+                            </p>
+                                <p class = 'price_1'>
+                                    <%= item.price%>
+                                </p>
+                     <%else%>
+                            <p class = 'name_2'>
+                                <%= item.name%>
+                            </p>
+                            <p class = 'item_pic_box_2'>
+                                <%= image_tag 'money.jpg',class:'item_pic_2' %>
+                            </p>
+                                <p class = 'price_2'>
+                                    <%= item.price%>
+                                </p>
                         <%end%>
                     <%end%>
+
+
 
                 
                  </section>
