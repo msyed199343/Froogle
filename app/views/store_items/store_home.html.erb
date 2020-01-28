@@ -1,9 +1,9 @@
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<header> 
+<header class = 'fix'> 
             <div class="nav">
                 <a href="/users">Home</a>
-                <a href="/store_items">Store</a>
+                <a href="/users/about">About</a>
                 <a href="">Login</a> 
                 <a href="/users/new">Sign Up</a> 
             </div>
@@ -16,36 +16,14 @@
             
            </section>
 
-                </section class = 'item_box'>
-                    
-                    <%@items.each_with_index do |item, i|%>
-                    <%if i.even?%>
-                            <p class = 'name_1'>
-                                 <%= item.name%>
-                            </p>
-                            <p class = 'item_pic_box_1'>
-                                <%= image_tag 'money.jpg',class:'item_pic_1' %>
-                            </p>
-                                <p class = 'price_1'>
-                                    <%= item.price%>
-                                </p>
-                     <%else%>
-                            <p class = 'name_2'>
-                                <%= item.name%>
-                            </p>
-                            <p class = 'item_pic_box_2'>
-                                <%= image_tag 'money.jpg',class:'item_pic_2' %>
-                            </p>
-                                <p class = 'price_2'>
-                                    <%= item.price%>
-                                </p>
-                        <%end%>
-                    <%end%>
+              <section id = 'top' class = "middle">
+            
+            </section>
 
 
 
                 
-                 </section>
+                 
 
         
           

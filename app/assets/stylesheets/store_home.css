@@ -1,9 +1,9 @@
 
 
 .top {
-    background-image: url('fs.png'), url('ybox.png'), url('Froogle.png');
-    background-size: 100% ;
-    padding: 50px;
+    /* background-image: url('fs.png'), url('ybox.png'), url('Froogle.png'); */
+    background-size:  100%;
+    margin-top: 10%;
     background-repeat: no-repeat, no-repeat;
     width: 100%;
     background-position: center;
@@ -112,3 +112,75 @@ clear:left;
 float: right;
 clear:left;
 }
+
+.middle{
+    background-size: 100%;
+    background-position: ;
+    text-align:  center;
+    background-repeat: no-repeat, no-repeat;
+    width: 100%;
+    background-position: center;
+    height: 400px;
+    animation-name: backgroundFade_2;
+    animation-duration:  12s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    display: inline;
+    float: left;
+    
+}
+
+@keyframes backgroundFade_2 {
+    
+    0% {
+        background-image: url('Froogle.png');
+        
+    }
+
+    10% {
+        background-image: url('Froogle.png');
+        
+    }
+
+    20% {
+        background-image: url('Froogle.png');
+        
+    }
+
+
+    30% {
+        background-image: url('Froogle.png');
+        
+    }
+
+    40% {
+        background-image: url('Froogle.png');
+        
+    }
+
+    50% {
+        background-image: url('camp.png');
+        
+    }
+
+    60% {
+        background-image: url('camp.png');
+        
+    }
+
+    70% {
+        background-image: url('camp.png');
+    }
+
+    80% {
+        background-image: url('camp.png');
+    }
+
+    90% {
+        background-image: url('camp.png');
+    }
+
+    100% {
+        background-image: url('camp.png');
+    }

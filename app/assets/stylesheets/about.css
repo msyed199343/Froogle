@@ -1,3 +1,4 @@
+
 .head_img{
     height: 40px;
     width: 125px;
@@ -48,13 +49,23 @@
     margin-top: 10px;
     margin-left: 15px;
     float:left;
+
     
+}
+
+.fix{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    
+    top:0;
+
 }
 
 .nav{
    float: right;
    margin: 10px;
-
+    
 }
 
 
