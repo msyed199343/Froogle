@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get '/users/login_page', to: 'users#login_page'
   resources :users
-  resources :store_items 
   get '/store_items/store_front', to: 'store_items#store_front'
+  resources :store_items 
+  
   resources :search_tables
   
 

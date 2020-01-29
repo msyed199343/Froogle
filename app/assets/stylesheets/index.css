@@ -1,5 +1,6 @@
 body{
     font-family: arial,sans-serif;
+    
 }
 .right_nav {
     float: right;
@@ -40,9 +41,8 @@ input.sb{
     opacity: 1.0;
     text-align: left;
 }
-input{
 
-}
+
 .sb:hover, .sb:focus{
     border: 1.5px solid transparent;
   }

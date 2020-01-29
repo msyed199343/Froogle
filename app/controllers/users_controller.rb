@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-    skip_before_action :verify_authenticity_token
+    # skip_before_action :verify_authenticity_token
+    # helper_method :login_page
     def index
         # @search = SearchTable.new 
         render :home
@@ -9,25 +10,18 @@ class UsersController < ApplicationController
         render :about
     end
 
-    # def create 
-    #     #if user exists show them to this page 
-    #     #render :login
-    #     #else if they dont exist show them to the sign up page below
-    #     #if user is logged in buttun should say sign out (send to destroy to destory session)
+    def create 
+    #     if user exists show them to this page 
+    #     render :login
+    #     else if they dont exist show them to the sign up page below
+    #     if user is logged in buttun should say sign out (send to destroy to destory session)
         
-    # end
+    end
 
-    #  def show
-    #         @store_item = User.find_by(id: params[:search].to_i)
+    def login_page
+        render :login
+    end
 
-    #         if @store_item
-    #             render :FS5
-    #         else
-
-    #            redirect_to users_url
-               
-    #         end
-    # end
 
     def new
         render :sign_up

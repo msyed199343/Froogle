@@ -1,18 +1,21 @@
 
 
 .top {
-    /* background-image: url('fs.png'), url('ybox.png'), url('Froogle.png'); */
-    background-size:  100%;
-    margin-top: 10%;
+    background-size: 100% 90%;
+    max-width: 1025px;
+    min-width: 700px;
     background-repeat: no-repeat, no-repeat;
     width: 100%;
-    background-position: center;
-    height: 350px;
+    background-position: center bottom;
+    height: 400px;
     animation-name: backgroundFade;
-    animation-duration:  12s;
+    animation-duration:  10s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function: ease-out;
+    text-align: center;
+    margin: 10%;
+    margin-bottom: 0%;
 }
 
 @keyframes backgroundFade {
@@ -114,22 +117,29 @@ clear:left;
 }
 
 .middle{
+    
     background-size: 100%;
-    background-position: ;
+    max-width: 1025px;
+    min-width: 700px;
     text-align:  center;
     background-repeat: no-repeat, no-repeat;
     width: 100%;
-    background-position: center;
-    height: 400px;
+    background-position: center top;
+    height: 300px;
     animation-name: backgroundFade_2;
-    animation-duration:  12s;
+    animation-duration:  10s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function: ease-out;
     display: inline;
     float: left;
+    margin: 10%;
+    margin-top: 0%;
+    margin-bottom: 0%;
     
 }
+
+
 
 @keyframes backgroundFade_2 {
     
@@ -184,3 +194,11 @@ clear:left;
     100% {
         background-image: url('camp.png');
     }
+}
+
+
+
+
+
+
+
