@@ -9,7 +9,7 @@
     background-position: center bottom;
     height: 400px;
     animation-name: backgroundFade;
-    animation-duration:  10s;
+    animation-duration:  12s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function: ease-out;
