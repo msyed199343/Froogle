@@ -7,8 +7,13 @@
 #  password_digest :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  search_criteria :string
+#  store_item_id   :integer
 #
 
 class User < ApplicationRecord
     
+
+
+
 end

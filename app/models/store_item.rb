@@ -10,10 +10,8 @@
 #
 
 class StoreItem < ApplicationRecord
-    
+   validates :name, :price, presence: true
 
-
-    # attr_reader :price, :name
 
 
 

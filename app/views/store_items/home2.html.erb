@@ -1,0 +1,43 @@
+
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+   
+        <Header>
+        
+            <nav class = 'left_nav'>
+                <a href="/users/about">About</a> 
+                <a href=<%="/store_items/store_front"%>>Store</a> 
+            </nav>
+            <nav class = "right_nav">
+                <a href="/users/new">Sign Up</a> 
+                <a href="">Login</a> 
+            </nav>
+        </Header>
+<body>
+        <section class ='section_1'>
+            
+            <%= image_tag("Froogle.png", alt:"logo", class: 'img_1') %>
+        </section>
+        
+        <section class='section_2'>
+        <form action = '/store_items/:id' method = 'show'>
+            <input type="text" class='sb' name = "name" >
+     
+            </section>
+            <section class = 'gs'>
+            
+            <input type = 'submit' value="Froogle Search" class= 'buttons'>
+            <input type='submit' value="$ Save Me Some $" class = 'buttons' >
+           
+        </form>
+        </section>
+        <footer>
+            <p class='disc'><strong >This website is a portfolio project inspired by Google.</strong><p>
+            <p class='disc'><strong >Created by Syed A.K Mohiuddin</strong><p>
+
+                <nav class='bottom_nav'>
+                    <a href="">Hot Discounts</a> 
+                    <a href="">Coupons</a> 
+                    <a href="/users/about">About Froogle</a>
+                </nav>
+        </footer>
+</body>
