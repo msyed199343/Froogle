@@ -1,5 +1,7 @@
 class StoreItemsController < ApplicationController
-    helper_method :store_front
+    before_action :require_login
+    helper_method :store_front, :about
+
     def index
         # @items = StoreItem.all 
         render :home2
@@ -8,8 +10,9 @@ class StoreItemsController < ApplicationController
     def show
             @store_item = StoreItem.find_by(name: params[:name])
             if @store_item
-
-                    render :"#{@store_item[:name]}"  
+                    
+                        render :"#{@store_item[:name]}"  
+                    
              else
               store_front
             end
@@ -20,6 +23,8 @@ class StoreItemsController < ApplicationController
         render :store_home
     end
 
-    
-  
+    def about
+        render :about
+    end
+
 end

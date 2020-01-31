@@ -1,33 +1,36 @@
 class UsersController < ApplicationController
     # skip_before_action :verify_authenticity_token
     # helper_method :login_page
-    def index
-        # @search = SearchTable.new 
-        render :home
+    def new
+        # registration of new user 
+        @user = User.new
+        render :new 
     end
 
-    def show
-        render :about
-    end
+
 
     def create 
-    #     if user exists show them to this page 
-    #     render :login
-    #     else if they dont exist show them to the sign up page below
-    #     if user is logged in buttun should say sign out (send to destroy to destory session)
-        
+    #     if user exists show raise error 
+    #     if not save them to db login and send em to home page
+        @user = User.new(user_params)
+
+        if @user.save
+           login_user!(@user)
+            redirect_to store_items_url
+            
+        else
+            flash.now[:errors] =  @user.errors.full_messages
+            render :new
+        end
+    
+          
     end
 
-    def login_page
-        render :login
-    end
+    
+   
 
-
-    def new
-        render :sign_up
-    end
-
-    def destroy
-        #ends current session
+    private
+    def user_params
+        params.require(:user).permit(:username, :password)
     end
 end

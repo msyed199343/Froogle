@@ -1,8 +1,6 @@
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-<header class = 'fix'> 
-           
-              <nav class = 'nav'>
+ 
+<header><%= link_to image_tag("Froogle.png", class: "head_img"), "/store_items"%>
+  <nav class = 'nav'>
                 <a href="/store_items/about">About</a> 
                 <a href=<%="/store_items/store_front"%>>Store</a> 
             </nav>
@@ -23,30 +21,29 @@
                     <input type="submit" value="Logout">
                 </form>
                  <% end %>
-            </nav>
-          
-       
-             <%= link_to image_tag("Froogle.png", class: "head_img"), "/store_items"%>
+            </nav></header>
+<h1>New User</h1>
+    <%= render 'shared/errors' %>
 
-</header>
-           
-           
-           <section id = 'top' class = "top">
-            
-           </section>
+    <form action="<%= users_url %>" method="post">
+      <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
 
-              <section id = 'middle' class = "middle">
-                
-            </section>
+      <label for="user_username">Username:</label>
+      <input type="text"
+        name="user[username]"
+        id="user_username"
+        value="<%= @user.username %>">
+      <br>
 
-                
+      <label for="user_password">Password</label>
+      <input type="password"
+        name="user[password]"
+        id="user_password"
+        value="<%= @user.password %>">
+      <br>
 
-
-                
-                 
-
-        
-          
-
-                <footer>
-                </footer>
+      <input type="submit">
+    </form>

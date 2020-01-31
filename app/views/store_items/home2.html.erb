@@ -1,16 +1,32 @@
 
    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-   
-        <Header>
+   <%= render 'shared/errors' %>
+       <Header>
         
             <nav class = 'left_nav'>
-                <a href="/users/about">About</a> 
+                <a href="/store_items/about">About</a> 
                 <a href=<%="/store_items/store_front"%>>Store</a> 
             </nav>
-            <nav class = "right_nav">
+            <% if current_user.nil? %> 
+                <nav class = 'right_nav'>
                 <a href="/users/new">Sign Up</a> 
-                <a href="/users/login_page">Login</a> 
+                <a href="<%= new_session_url%>">Sign in</a> 
+                </nav>
+             <% else %>
+             <nav class -= 'right_nav_logged'>
+               <a class = 'right_nav_logged'> <%= current_user.username %> </a>
+               <form action="<%= session_url %>" method="post" class = 'logout_button'>
+                 <input
+                type="hidden"
+                name="authenticity_token"
+                value="<%= form_authenticity_token %>">
+                    <input type="hidden" name="_method" value="delete">
+                    <input type="submit" value="Logout">
+                </form>
+                 <% end %>
             </nav>
+               
+            
         </Header>
 <body>
         <section class ='section_1'>
