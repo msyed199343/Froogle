@@ -7,7 +7,7 @@
             <% if current_user.nil? %> 
                 <nav class = 'nav'>
                 <a href=<%=new_user_url%>>Sign Up</a> 
-                <a href="<%= 'new_session_url'%>">Sign in</a> 
+                <a href="<%= new_session_url%>">Sign in</a> 
                 </nav>
              <% else %>
              <nav class -= 'nav'>
