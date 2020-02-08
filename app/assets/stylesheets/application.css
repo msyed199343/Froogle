@@ -54,9 +54,15 @@
     border-radius: 100px;
     color: whitesmoke;
     position: relative;
-    /* top: -50px; */
-    /* padding-bottom: 10px; */
     
+}
+
+
+
+    to {
+            height: 100%;
+            width: 100%;
+    }
 }
 
 .decor{
@@ -81,5 +87,5 @@
 
 .link_dec{
     color: whitesmoke;
-    
+     
 }

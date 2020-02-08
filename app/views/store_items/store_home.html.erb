@@ -5,16 +5,10 @@
               <nav class = 'nav'>
                 <a href="/store_items/about">About</a> 
                 <a href=<%="/store_items/store_front"%>>Store</a> 
-            </nav>
-            <% if current_user.nil? %> 
-                <nav class = 'nav'>
-                <a href="/users/new">Sign Up</a> 
-                <a href="<%= new_session_url%>">Sign in</a> 
-                </nav>
-             <% else %>
-             <nav class -= 'nav'>
-               <a class = 'nav'> <%= current_user.username %> </a>
-               <form action="<%= session_url %>" method="post" class = 'nav'>
+            
+            <% if current_user != nil %> 
+               
+               <form action="<%= session_url %>" method="post" class = 'w'>
                  <input
                 type="hidden"
                 name="authenticity_token"
@@ -22,8 +16,15 @@
                     <input type="hidden" name="_method" value="delete">
                     <input type="submit" value="Logout">
                 </form>
+                <strong> <a> <%= current_user.username %> </a></strong>
+             <% else %>
+                <nav class = 'nav'>
+                <a href="/users/new">Sign Up</a> 
+                <a href="<%= new_session_url%>">Sign in</a> 
+                </nav>
                  <% end %>
             </nav>
+            <div class = 'black'></div>
           
        
              <%= link_to image_tag("Froogle.png", class: "head_img"), "/store_items"%>

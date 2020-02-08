@@ -13,7 +13,7 @@
                 <a href="<%= new_session_url%>">Sign in</a> 
                 </nav>
              <% else %>
-             <nav class -= 'right_nav_logged'>
+             <nav class = 'right_nav_logged'>
                <a class = 'right_nav_logged'> <%= current_user.username %> </a>
                <form action="<%= session_url %>" method="post" class = 'logout_button'>
                  <input
