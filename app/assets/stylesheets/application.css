@@ -59,20 +59,12 @@
 
 
 
-    to {
-            height: 100%;
-            width: 100%;
-    }
-}
-
 .decor{
     color:whitesmoke;
     font-size: 30px;
 }
 
-.cool{
-    /* background-color: gray; */
-}
+
 
 .decor{
   position: relative;
