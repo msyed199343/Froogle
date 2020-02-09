@@ -4,6 +4,7 @@ body{
 }
 .right_nav {
     float: right;
+    
 }
 
 .right_nav_logged{
@@ -19,9 +20,8 @@ body{
     font-family: arial,sans-serif;
     float: right;
     color: black;
-      border-radius: 75px;
       padding: 0;
-      border:1px
+      height: 20px;
 }
 
 
@@ -116,6 +116,7 @@ a{
     border: 0.6px solid gray;
     
 }
+
 .buttons{
     color:  gray;
    border: whitesmoke;
@@ -127,6 +128,15 @@ a{
    margin-bottom: 40px;
 }
 
+.buttons_2{
+    color:  gray;
+    border: whitesmoke;
+    background-color: whitesmoke;
+    outline: none;
+    font-family: arial,sans-serif;
+    border-radius: 100px;
+    
+}
 .disc{
     font-size: xx-small;
     
@@ -136,4 +146,10 @@ a{
     color: green;
 }
 
+.name{
+   
+}
 
+@keyframes .scroll{
+    
+}

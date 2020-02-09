@@ -7,24 +7,26 @@
                 <a href="/store_items/about">About</a> 
                 <a href=<%="/store_items/store_front"%>>Store</a> 
             </nav>
-            <% if current_user.nil? %> 
-                <nav class = 'right_nav'>
+         <nav class = 'right_nav'>
+                <% if current_user.nil? %> 
+               
                 <a href="/users/new">Sign Up</a> 
                 <a href="<%= new_session_url%>">Sign in</a> 
-                </nav>
+                
              <% else %>
-             <nav class = 'right_nav_logged'>
-               <a class = 'right_nav_logged'> <%= current_user.username %> </a>
-               <form action="<%= session_url %>" method="post" class = 'logout_button'>
+              <p class = "name"> Welcome <%= current_user.username%>! </p>
+                
+               <form action="<%= session_url %>" method="post">
                  <input
                 type="hidden"
                 name="authenticity_token"
                 value="<%= form_authenticity_token %>">
                     <input type="hidden" name="_method" value="delete">
-                    <input type="submit" value="Logout">
+                    <input type="submit" value="Logout" class = 'buttons_2'>
                 </form>
+                
                  <% end %>
-            </nav>
+        </nav>
                
             
         </Header>

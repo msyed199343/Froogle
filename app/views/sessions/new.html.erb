@@ -1,18 +1,19 @@
 
-<header><%= link_to image_tag("Froogle.png", class: "head_img"), "/store_items"%>
+<header>
+<%= link_to image_tag("Froogle.png", class: "head_img"), "/store_items"%>
   <nav class = 'nav'>
                 <a href="/store_items/about">About</a> 
                 <a href=<%="/store_items/store_front"%>>Store</a> 
-            </nav>
+            
             <% if current_user.nil? %> 
-                <nav class = 'nav'>
+                
                 <a href=<%=new_user_url%>>Sign Up</a> 
                 <a href="<%= new_session_url%>">Sign in</a> 
-                </nav>
+                
              <% else %>
-             <nav class -= 'nav'>
-               <a class = 'nav'> <%= current_user.username %> </a>
-               <form action="<%= session_url %>" method="post" class = 'nav'>
+             
+               <a> <%= current_user.username %> </a>
+               <form action="<%= session_url %>" method="post" >
                  <input
                 type="hidden"
                 name="authenticity_token"
@@ -21,7 +22,8 @@
                     <input type="submit" value="Logout">
                 </form>
                  <% end %>
-            </nav></header>
+  </nav>
+</header>
 <section class = 'move_2'>
 <p class = 'decor'>Sign in</p>
  <%= render "shared/errors" %>
