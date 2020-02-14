@@ -1,7 +1,7 @@
  
 class StoreItemsController < ApplicationController
     before_action :require_login
-    helper_method :store_front, :about
+    helper_method :store_front, :about, :random
     
     def index
         # @items = StoreItem.all 
@@ -25,7 +25,12 @@ class StoreItemsController < ApplicationController
             end
     end
 
-    
+    def random 
+        @all = StoreItem.all 
+        render :"#{@all.sample.name}"
+    end
+
+
     def store_front
         render :store_home
     end
